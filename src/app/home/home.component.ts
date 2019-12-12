@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'OF Score';
-  warning = '#FFFFFF';
+  title = 'of Score';
+  warning = '#cccccc';
 
   constructor() { }
 
