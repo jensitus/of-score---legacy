@@ -16,12 +16,7 @@ export class OneComponent implements OnInit {
   of3 = '6';
   of4 = '8';
   of5 = '10';
-
-  buttonOne: boolean;
-  buttonTwo: boolean;
-  buttonThree: boolean;
-  buttonFour: boolean;
-  buttonFive: boolean;
+  button: string;
 
   constructor() {
   }
@@ -29,53 +24,33 @@ export class OneComponent implements OnInit {
   ngOnInit() {
     this.title = 'Morphology';
     this.bg = 'spine-back';
-    this.buttonOne = true;
+    this.button = localStorage.getItem(OfScore.ONE);
   }
 
   select(button) {
     switch (button) {
       case 'one': {
-        this.buttonOne = true;
-        this.buttonTwo = false;
-        this.buttonThree = false;
-        this.buttonFour = false;
-        this.buttonFive = false;
+        this.button = this.of1;
         localStorage.setItem(OfScore.ONE, this.of1);
         break;
       }
       case 'two': {
-        this.buttonOne = false;
-        this.buttonTwo = true;
-        this.buttonThree = false;
-        this.buttonFour = false;
-        this.buttonFive = false;
+        this.button = this.of2;
         localStorage.setItem(OfScore.ONE, this.of2);
         break;
       }
       case 'three': {
-        this.buttonOne = false;
-        this.buttonTwo = false;
-        this.buttonThree = true;
-        this.buttonFour = false;
-        this.buttonFive = false;
+        this.button = this.of3;
         localStorage.setItem(OfScore.ONE, this.of3);
         break;
       }
       case 'four': {
-        this.buttonOne = false;
-        this.buttonTwo = false;
-        this.buttonThree = false;
-        this.buttonFour = true;
-        this.buttonFive = false;
+        this.button = this.of4;
         localStorage.setItem(OfScore.ONE, this.of4);
         break;
       }
       case 'five': {
-        this.buttonOne = false;
-        this.buttonTwo = false;
-        this.buttonThree = false;
-        this.buttonFour = false;
-        this.buttonFive = true;
+        this.button = this.of5;
         localStorage.setItem(OfScore.ONE, this.of5);
         break;
       }
