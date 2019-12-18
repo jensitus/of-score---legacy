@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'of Score';
-  warning = '#cccccc';
+  title = 'OF Score';
+  bg: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.bg = 'spine-back';
   }
 
 }

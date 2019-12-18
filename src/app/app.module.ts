@@ -14,6 +14,7 @@ import {SixComponent} from './of/six/six.component';
 import {ResultComponent} from './of/result/result.component';
 import {RoutingModule} from './routing/routing.module';
 import {RouterModule} from '@angular/router';
+import { CheckCircleComponent } from './vectors/check-circle/check-circle.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {RouterModule} from '@angular/router';
     FourComponent,
     FiveComponent,
     SixComponent,
-    ResultComponent
+    ResultComponent,
+    CheckCircleComponent
   ],
   imports: [
     BrowserModule,
