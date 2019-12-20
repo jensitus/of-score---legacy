@@ -1,1 +1,25 @@
-<p>two works!</p>
+<app-navbar [title]="title" [bg]="bg"></app-navbar>
+<div class="container">
+  <h4 class="mt-5">T-Score</h4>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-0 mt-3">
+        <button (click)="select()" class="btn btn-outline-secondary text-left">
+          <div class="row">
+            <div class="col">
+              T-Score < -3
+            </div>
+            <div class="col text-right">
+              <div *ngIf="ts">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3">
+        <a [routerLink]="['/three']" class="btn btn-outline-info">three</a>
+      </div>
+    </div>
+  </div>
+</div>

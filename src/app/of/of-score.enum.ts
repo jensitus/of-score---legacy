@@ -1,6 +1,7 @@
 export enum OfScore {
 
   ONE = 'ofScoreOne',
-  TWO = 'ofScoreTwo'
+  TWO = 'ofScoreTwo',
+  THREE = 'ofScoreThree'
 
 }
