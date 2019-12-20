@@ -10,8 +10,7 @@ export class TwoComponent implements OnInit {
 
   title: string;
   bg: string;
-  button: string;
-  ts: boolean;
+  button: boolean;
   tScore: string;
   constructor() { }
 
@@ -22,15 +21,15 @@ export class TwoComponent implements OnInit {
       this.tScore = '0';
       localStorage.setItem(OfScore.TWO, this.tScore);
     } else if (localStorage.getItem(OfScore.TWO) === '1') {
-      this.ts = true;
+      this.button = true;
     } else {
-      this.ts = false;
+      this.button = false;
     }
   }
 
   select() {
-    this.ts = !this.ts;
-    if (this.ts) {
+    this.button = !this.button;
+    if (this.button) {
       this.tScore = '1';
     } else {
       this.tScore = '0';
