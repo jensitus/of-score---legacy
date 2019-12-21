@@ -12,7 +12,9 @@ export class TwoComponent implements OnInit {
   bg: string;
   button: boolean;
   tScore: string;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.title = 'bone density';
