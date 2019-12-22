@@ -7,7 +7,7 @@
         <button (click)="select('more')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS > 4
+              VAS &lt; 4
             </div>
             <div class="col">
               <div *ngIf="button == vasMoreThanFour" class="text-right">
@@ -21,7 +21,7 @@
         <button (click)="select('less')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS < 4
+              VAS &ge; 4
             </div>
             <div class="col">
               <div *ngIf="button == vasLessThanFour" class="text-right">

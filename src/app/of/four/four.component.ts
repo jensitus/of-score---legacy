@@ -19,7 +19,7 @@ export class FourComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'Pain';
-    this.bg = 'danger';
+    this.bg = 'warning';
     this.button = localStorage.getItem(OfScore.FOUR);
   }
 

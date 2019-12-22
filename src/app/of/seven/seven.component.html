@@ -1,1 +1,81 @@
-<p>seven works!</p>
+<app-navbar [title]="title" [bg]="bg"></app-navbar>
+<div class="container">
+  <h4 [innerHTML]="title" class="mt-5"></h4>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-0 mt-3">
+        <button (click)="select('asa')" class="btn btn-outline-primary text-left">
+          <div class="row">
+            <div class="col">
+              ASA &gt; 3
+            </div>
+            <div class="col">
+              <div *ngIf="asa">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('dementia')" class="btn btn-outline-primary text-left">
+          <div class="row">
+            <div class="col">
+              Dementia
+            </div>
+            <div class="col">
+              <div *ngIf="dementia">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('bmi')" class="btn btn-outline-primary text-left">
+          <div class="row">
+            <div class="col">
+              BMI < 20
+            </div>
+            <div class="col">
+              <div *ngIf="bmi">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('dependent')" class="btn btn-outline-primary text-left">
+          <div class="row">
+            <div class="col">
+              Dependent
+            </div>
+            <div class="col">
+              <div *ngIf="dependent">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('anticoagulation')" class="btn btn-outline-primary text-left">
+          <div class="row">
+            <div class="col">
+              Anticoagulation
+            </div>
+            <div class="col">
+              <div *ngIf="anticoagulation">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3">
+        <a [routerLink]="['/result']" class="btn btn-outline-danger">result</a>
+      </div>
+    </div>
+  </div>
+</div>
