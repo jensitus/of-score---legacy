@@ -9,17 +9,19 @@ import {FourComponent} from '../of/four/four.component';
 import {FiveComponent} from '../of/five/five.component';
 import {SixComponent} from '../of/six/six.component';
 import {ResultComponent} from '../of/result/result.component';
+import {SevenComponent} from '../of/seven/seven.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'one', component: OneComponent},
-  {path: 'two', component: TwoComponent},
-  {path: 'three', component: ThreeComponent},
-  {path: 'four', component: FourComponent},
-  {path: 'five', component: FiveComponent},
-  {path: 'six', component: SixComponent},
-  {path: 'result', component: ResultComponent}
+  {path: 'home',   component:  HomeComponent},
+  {path: '',       redirectTo: 'home', pathMatch: 'full'},
+  {path: 'one',    component:  OneComponent},
+  {path: 'two',    component:  TwoComponent},
+  {path: 'three',  component:  ThreeComponent},
+  {path: 'four',   component:  FourComponent},
+  {path: 'five',   component:  FiveComponent},
+  {path: 'six',    component:  SixComponent},
+  {path: 'seven',  component:  SevenComponent},
+  {path: 'result', component:  ResultComponent}
 ];
 
 @NgModule({

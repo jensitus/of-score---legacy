@@ -8,8 +8,8 @@ import {OfScore} from '../of-score.enum';
 })
 export class TwoComponent implements OnInit {
 
-  title: string;
-  bg: string;
+  title = 'bone density';
+  bg = 'secondary';
   button: boolean;
   tScore: string;
 
@@ -17,8 +17,6 @@ export class TwoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title = 'bone density';
-    this.bg = 'secondary';
     if (localStorage.getItem(OfScore.TWO) == null) {
       this.tScore = '0';
       localStorage.setItem(OfScore.TWO, this.tScore);

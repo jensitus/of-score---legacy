@@ -15,7 +15,7 @@ import {ResultComponent} from './of/result/result.component';
 import {RoutingModule} from './routing/routing.module';
 import {RouterModule} from '@angular/router';
 import { CheckCircleComponent } from './vectors/check-circle/check-circle.component';
-
+import { SevenComponent } from './of/seven/seven.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { CheckCircleComponent } from './vectors/check-circle/check-circle.compon
     FiveComponent,
     SixComponent,
     ResultComponent,
-    CheckCircleComponent
+    CheckCircleComponent,
+    SevenComponent
   ],
   imports: [
     BrowserModule,
@@ -40,4 +41,5 @@ import { CheckCircleComponent } from './vectors/check-circle/check-circle.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

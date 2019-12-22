@@ -24,7 +24,6 @@ export class ThreeComponent implements OnInit {
   }
 
   select(button) {
-    console.log(button);
     switch (button) {
       case 'yes': {
         this.button = this.yes;
