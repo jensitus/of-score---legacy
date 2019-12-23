@@ -27,6 +27,21 @@ export class SevenComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (localStorage.getItem(this.ASA) === 'true') {
+      this.asa = true;
+    }
+    if (localStorage.getItem(this.DEMENTIA) === 'true') {
+      this.dementia = true;
+    }
+    if (localStorage.getItem(this.BMI) === 'true') {
+      this.bmi = true;
+    }
+    if (localStorage.getItem(this.DEPENDENT) === 'true') {
+      this.dependent = true;
+    }
+    if (localStorage.getItem(this.ANTICOAGULATION) === 'true') {
+      this.anticoagulation = true;
+    }
   }
 
   select(button) {
