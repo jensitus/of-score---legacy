@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {OfScore} from '../of-score.enum';
 
 @Component({
   selector: 'app-seven',
@@ -13,6 +14,7 @@ export class SevenComponent implements OnInit {
   BMI = 'bmi';
   DEPENDENT = 'dependent';
   ANTICOAGULATION = 'anticoagulation';
+  SEVEN_RESULT = 'sevenResult';
 
   title = 'state of health';
   bg = 'success';
@@ -92,6 +94,30 @@ export class SevenComponent implements OnInit {
         break;
       }
     }
+    this.sevenResult();
+  }
+
+  private sevenResult() {
+    let result = 0;
+    if (localStorage.getItem(this.ASA) === 'true') {
+      result--;
+    }
+    if (localStorage.getItem(this.DEMENTIA) === 'true') {
+      result--;
+    }
+    if (localStorage.getItem(this.BMI) === 'true') {
+      result--;
+    }
+    if (localStorage.getItem(this.DEPENDENT) === 'true') {
+      result--;
+    }
+    if (localStorage.getItem(this.ANTICOAGULATION) === 'true') {
+      result--;
+    }
+    if (result <= -2) {
+      result = -2;
+    }
+    localStorage.setItem(OfScore.SEVEN, result.toString());
   }
 
 }
