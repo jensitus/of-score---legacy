@@ -3,7 +3,89 @@
   <h4 [innerHTML]="heading" class="mt-5"></h4>
   <div class="row">
     <div class="col-md-4">
-      <div [innerHTML]="result"></div>
+      <div class="card mt-3">
+        <div class="card-header">
+          Total result
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div [innerHTML]="result"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{resultExplanation}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="card-header">
+          Single Results
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              Morphology:
+            </div>
+            <div class="col text-right">
+              {{morphology}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              Bone Density:
+            </div>
+            <div class="col text-right">
+              {{boneDensity}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              Sintering:
+            </div>
+            <div class="col text-right">
+              {{sintering}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              Pain:
+            </div>
+            <div class="col text-right">
+              {{pain}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              Neurology:
+            </div>
+            <div class="col text-right">
+              {{neurology}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              Mobilization:
+            </div>
+            <div class="col text-right">
+              {{mobilization}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              State of Health:
+            </div>
+            <div class="col text-right">
+              {{stateOfHealth}}
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
