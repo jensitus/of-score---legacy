@@ -27,12 +27,12 @@ export class ThreeComponent implements OnInit {
     switch (button) {
       case 'yes': {
         this.button = this.yes;
-        localStorage.setItem(OfScore.THREE, this.yes);
+        localStorage.setItem(OfScore.THREE, '1');
         break;
       }
       case 'no': {
         this.button = this.no;
-        localStorage.setItem(OfScore.THREE, this.no);
+        localStorage.setItem(OfScore.THREE, '-1');
         break;
       }
     }

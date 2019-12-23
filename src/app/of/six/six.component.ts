@@ -11,8 +11,8 @@ export class SixComponent implements OnInit {
   title = 'Mobilization';
   bg = 'primary';
 
-  yes = 'yes';
-  no = 'no';
+  yes = '-1';
+  no = '1';
   button: string;
 
   constructor() { }
