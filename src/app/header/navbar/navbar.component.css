@@ -2,6 +2,10 @@
   margin-top: 100px;
 }
 
+a {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 992px) {
   #bottom-nav {
     display: none;

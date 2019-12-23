@@ -1,34 +1,30 @@
 <nav id="top-nav-desk" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
-    <a class="navbar-brand" href="#">{{title}}</a>
+
+    <a class="navbar-brand" *ngIf="home">{{title}}</a>
+    <a class="navbar-brand" (click)="backLink()" *ngIf="!home"><i class="fa fa-arrow-left"></i> {{title}}</a>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" [routerLink]="['/legal']">legal</a>
         </li>
       </ul>
     </div>
 </nav>
 <nav id="top-nav-mobile" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
-    <a class="navbar-brand" href="#">{{title}}</a>
+    <a class="navbar-brand" routerLink="['/home']">{{title}}</a>
   </div>
 </nav>
 <nav id="bottom-nav" class="navbar fixed-bottom navbar-light bg-white">
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="nav-link" [routerLink]="['/legal']">legal</a>
     </li>
   </ul>
 </nav>

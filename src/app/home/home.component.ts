@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   title = 'OF Score';
   bg: string;
+  home = true;
 
   constructor() { }
 

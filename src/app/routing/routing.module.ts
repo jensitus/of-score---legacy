@@ -10,6 +10,7 @@ import {FiveComponent} from '../of/five/five.component';
 import {SixComponent} from '../of/six/six.component';
 import {ResultComponent} from '../of/result/result.component';
 import {SevenComponent} from '../of/seven/seven.component';
+import {LegalComponent} from '../legal/legal.component';
 
 const routes: Routes = [
   {path: 'home',   component:  HomeComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'five',   component:  FiveComponent},
   {path: 'six',    component:  SixComponent},
   {path: 'seven',  component:  SevenComponent},
-  {path: 'result', component:  ResultComponent}
+  {path: 'result', component:  ResultComponent},
+  {path: 'legal',  component:  LegalComponent}
 ];
 
 @NgModule({
