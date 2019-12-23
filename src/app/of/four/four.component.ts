@@ -11,8 +11,8 @@ export class FourComponent implements OnInit {
   title: string;
   bg: string;
 
-  vasMoreThanFour = 'more';
-  vasLessThanFour = 'less';
+  vasMoreThanFour = '1';
+  vasLessThanFour = '-1';
   button: string;
 
   constructor() { }
