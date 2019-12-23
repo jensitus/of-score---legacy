@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
+  title = 'result';
+  heading = 'conclusion';
+  bg = 'primary';
+
   constructor() { }
 
   ngOnInit() {
