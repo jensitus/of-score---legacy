@@ -73,8 +73,13 @@
           </div>
         </button>
       </div>
-      <div>
-        <a [routerLink]="['/two']" class="btn btn-outline-danger mt-3">two</a>
+      <div class="row">
+        <div class="col text-left">
+          <a [routerLink]="['/two']" class="btn btn-outline-danger mt-3">two</a>
+        </div>
+        <div class="col text-right">
+          <app-of-pictures></app-of-pictures>
+        </div>
       </div>
     </div>
   </div>
