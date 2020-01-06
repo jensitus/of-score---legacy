@@ -16,6 +16,7 @@ import {RoutingModule} from './routing/routing.module';
 import {RouterModule} from '@angular/router';
 import {SevenComponent} from './of/seven/seven.component';
 import { LegalComponent } from './legal/legal.component';
+import { OfPicturesComponent } from './of/of-pictures/of-pictures.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LegalComponent } from './legal/legal.component';
     SixComponent,
     ResultComponent,
     SevenComponent,
-    LegalComponent
+    LegalComponent,
+    OfPicturesComponent
   ],
   imports: [
     BrowserModule,

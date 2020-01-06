@@ -3,78 +3,110 @@
   <h4 class="mt-5">OF</h4>
   <div class="row">
     <div class="col-md-4">
-      <div class="card border-0 mt-3">
-        <button (click)="select('one')" class="btn btn-outline-success text-left">
-          <div class="row">
-            <div class="col">
-              OF 1
-            </div>
-            <div class="col text-right">
-              <div *ngIf="button == of1">
-                <i class="fa fa-check"></i>
+
+      <div class="row mt-3">
+        <div class="col-9">
+          <button (click)="select('one')" class="btn btn-outline-success text-left btn-block">
+            <div class="row">
+              <div class="col">
+                OF 1
+              </div>
+              <div class="col text-right">
+                <div *ngIf="button == of1">
+                  <i class="fa fa-check"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
+        <div class="col-3 text-right">
+          <app-of-pictures ofp="1"></app-of-pictures>
+        </div>
       </div>
-      <div class="card border-0 mt-3">
-        <button (click)="select('two')" class="btn btn-outline-success text-left">
-          <div class="row">
-            <div class="col">
-              OF 2
-            </div>
-            <div class="col text-right">
-              <div *ngIf="button == of2">
-                <i class="fa fa-check"></i>
+
+      <div class="row mt-3">
+        <div class="col-9">
+          <button (click)="select('two')" class="btn btn-outline-success text-left btn-block">
+            <div class="row">
+              <div class="col">
+                OF 2
+              </div>
+              <div class="col text-right">
+                <div *ngIf="button == of2">
+                  <i class="fa fa-check"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
+        <div class="col-3 text-right">
+          <app-of-pictures ofp="2"></app-of-pictures>
+        </div>
       </div>
-      <div class="card border-0 mt-3">
-        <button (click)="select('three')" class="btn btn-outline-success text-left">
-          <div class="row">
-            <div class="col">
-              OF 3
-            </div>
-            <div class="col text-right">
-              <div *ngIf="button == of3">
-                <i class="fa fa-check"></i>
+      <div class="row mt-3">
+        <div class="col-9">
+          <button (click)="select('three')" class="btn btn-outline-success text-left btn-block">
+            <div class="row">
+              <div class="col">
+                OF 3
+              </div>
+              <div class="col text-right">
+                <div *ngIf="button == of3">
+                  <i class="fa fa-check"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
+        <div class="col-3 text-right">
+          <app-of-pictures ofp="3"></app-of-pictures>
+        </div>
       </div>
-      <div class="card border-0 mt-3">
-        <button (click)="select('four')" class="btn btn-outline-success text-left">
-          <div class="row">
-            <div class="col">
-              OF 4
-            </div>
-            <div class="col text-right">
-              <div *ngIf="button == of4">
-                <i class="fa fa-check"></i>
+
+      <div class="row mt-3">
+        <div class="col-9">
+          <button (click)="select('four')" class="btn btn-outline-success text-left btn-block">
+            <div class="row">
+              <div class="col">
+                OF 4
+              </div>
+              <div class="col text-right">
+                <div *ngIf="button == of4">
+                  <i class="fa fa-check"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
+        <div class="col-3 text-right">
+          <app-of-pictures ofp="4"></app-of-pictures>
+        </div>
       </div>
-      <div class="card border-0 mt-3">
-        <button (click)="select('five')" class="btn btn-outline-success text-left">
-          <div class="row">
-            <div class="col">
-              OF 5
-            </div>
-            <div class="col text-right">
-              <div *ngIf="button == of5">
-                <i class="fa fa-check"></i>
+
+      <div class="row mt-3">
+        <div class="col-9">
+          <button (click)="select('five')" class="btn btn-outline-success text-left btn-block">
+            <div class="row">
+              <div class="col">
+                OF 5
+              </div>
+              <div class="col text-right">
+                <div *ngIf="button == of5">
+                  <i class="fa fa-check"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
+        <div class="col-3 text-right">
+          <app-of-pictures ofp="5"></app-of-pictures>
+        </div>
       </div>
-      <div>
-        <a [routerLink]="['/two']" class="btn btn-outline-danger mt-3">two</a>
+
+      <div class="row mt-3">
+        <div class="col-9 text-left">
+          <a [routerLink]="['/two']" class="btn btn-outline-danger btn-block">two</a>
+        </div>
       </div>
     </div>
   </div>

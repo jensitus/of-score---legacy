@@ -1,0 +1,30 @@
+<span>
+  <small><a class="btn btn-outline-info" (click)="open(content)">pics</a></small>
+</span>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <div class="modal-title">
+      OF Bilder
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ngb-carousel interval="2000" [pauseOnHover]="pauseOnHover">
+      <ng-template ngbSlide *ngFor="let o of ofPics">
+        <div class="picsum-img-wrapper">
+          <img [src]="o" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+</ng-template>
+
