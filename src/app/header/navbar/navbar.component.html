@@ -1,6 +1,5 @@
 <nav id="top-nav-desk" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
-
     <a class="navbar-brand" *ngIf="home">{{title}}</a>
     <a class="navbar-brand" (click)="backLink()" *ngIf="!home"><i class="fa fa-arrow-left"></i> {{title}}</a>
       <ul class="navbar-nav mr-auto">
@@ -13,11 +12,14 @@
       </ul>
     </div>
 </nav>
+
 <nav id="top-nav-mobile" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
-    <a class="navbar-brand" routerLink="['/home']">{{title}}</a>
+    <a class="navbar-brand" *ngIf="home">{{title}}</a>
+    <a class="navbar-brand" (click)="backLink()" *ngIf="!home"><i class="fa fa-arrow-left"></i> {{title}}</a>
   </div>
 </nav>
+
 <nav id="bottom-nav" class="navbar fixed-bottom navbar-light bg-white">
   <ul class="nav justify-content-center">
     <li class="nav-item">
@@ -28,4 +30,5 @@
     </li>
   </ul>
 </nav>
+
 <div class="mt-5 mb-5"></div>
