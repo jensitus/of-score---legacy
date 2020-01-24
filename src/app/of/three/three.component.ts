@@ -20,7 +20,11 @@ export class ThreeComponent implements OnInit {
   ngOnInit() {
     this.title = 'sintering';
     this.bg = 'light';
-    this.button = localStorage.getItem(OfScore.THREE);
+    if (localStorage.getItem(OfScore.THREE) === '1') {
+      this.button = this.yes;
+    } else if (localStorage.getItem(OfScore.THREE) === '-1') {
+      this.button = this.no;
+    }
   }
 
   select(button) {

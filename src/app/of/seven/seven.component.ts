@@ -18,6 +18,7 @@ export class SevenComponent implements OnInit {
 
   title = 'state of health';
   bg = 'success';
+  next: string;
 
   asa: boolean;
   dementia: boolean;
@@ -44,6 +45,7 @@ export class SevenComponent implements OnInit {
     if (localStorage.getItem(this.ANTICOAGULATION) === 'true') {
       this.anticoagulation = true;
     }
+    this.next = 'result';
   }
 
   select(button) {

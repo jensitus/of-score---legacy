@@ -15,10 +15,13 @@ export class SixComponent implements OnInit {
   no = '1';
   button: string;
 
+  next: string;
+
   constructor() { }
 
   ngOnInit() {
     this.button = localStorage.getItem(OfScore.SIX);
+    this.next = 'next';
   }
 
   select(button) {
