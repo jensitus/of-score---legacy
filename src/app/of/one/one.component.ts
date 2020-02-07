@@ -10,6 +10,7 @@ export class OneComponent implements OnInit {
 
   title: string;
   bg: string;
+  description: string;
 
   of1 = '2';
   of2 = '4';

@@ -1,112 +1,249 @@
 <app-navbar [title]="title" bg="secondary"></app-navbar>
 <div class="container home-class">
-  <h4 class="mt-5">OF</h4>
   <div class="row">
     <div class="col-md-4">
-
-      <div class="row mt-3">
-        <div class="col-9">
-          <button (click)="select('one')" class="btn btn-outline-success text-left btn-block">
+      <div class="card mt-3">
+        <div class="row">
+          <div class="col-3">
+            <div class="pl-2 pt-2">
+              <app-of-pictures ofp="1"></app-of-pictures>
+            </div>
+          </div>
+          <div class="col-9">
             <div class="row">
               <div class="col">
-                OF 1
-              </div>
-              <div class="col text-right">
-                <div *ngIf="button == of1">
-                  <i class="fa fa-check"></i>
+                <div class="p-2">
+                  <b>OF 1</b>
                 </div>
               </div>
             </div>
-          </button>
-        </div>
-        <div class="col-3 text-right">
-          <app-of-pictures ofp="1"></app-of-pictures>
-        </div>
-      </div>
-
-      <div class="row mt-3">
-        <div class="col-9">
-          <button (click)="select('two')" class="btn btn-outline-success text-left btn-block">
             <div class="row">
               <div class="col">
-                OF 2
-              </div>
-              <div class="col text-right">
-                <div *ngIf="button == of2">
-                  <i class="fa fa-check"></i>
+                <div class="pr-2 pt-2 pb-2">
+                  No deformation (vertebral body edema in MRI-STIR)
                 </div>
               </div>
             </div>
-          </button>
+          </div>
         </div>
-        <div class="col-3 text-right">
-          <app-of-pictures ofp="2"></app-of-pictures>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="p-2">
+              <button (click)="select('one')" class="btn btn-sm btn-outline-success text-left btn-block">
+                <div class="row">
+                  <div class="col">
+                    OF 1
+                  </div>
+                  <div class="col text-right">
+                    <div *ngIf="button == of1">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-9">
-          <button (click)="select('three')" class="btn btn-outline-success text-left btn-block">
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="row">
+          <div class="col-3">
+            <div class="pl-2 pt-2">
+              <app-of-pictures ofp="2"></app-of-pictures>
+            </div>
+          </div>
+          <div class="col-9">
             <div class="row">
               <div class="col">
-                OF 3
-              </div>
-              <div class="col text-right">
-                <div *ngIf="button == of3">
-                  <i class="fa fa-check"></i>
+                <div class="p-2">
+                  <b>OF 2</b>
                 </div>
               </div>
             </div>
-          </button>
-        </div>
-        <div class="col-3 text-right">
-          <app-of-pictures ofp="3"></app-of-pictures>
-        </div>
-      </div>
-
-      <div class="row mt-3">
-        <div class="col-9">
-          <button (click)="select('four')" class="btn btn-outline-success text-left btn-block">
             <div class="row">
               <div class="col">
-                OF 4
-              </div>
-              <div class="col text-right">
-                <div *ngIf="button == of4">
-                  <i class="fa fa-check"></i>
+                <div class="pr-2">
+                  Deformation of one endplate
                 </div>
               </div>
             </div>
-          </button>
+          </div>
         </div>
-        <div class="col-3 text-right">
-          <app-of-pictures ofp="4"></app-of-pictures>
+        <div class="row mt-4">
+          <div class="col"></div>
+          <div class="col">
+            <div class="p-2">
+              <button (click)="select('two')" class="btn btn-sm btn-outline-success text-left btn-block">
+                <div class="row">
+                  <div class="col">
+                    OF 2
+                  </div>
+                  <div class="col text-right">
+                    <div *ngIf="button == of2">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="row mt-3">
-        <div class="col-9">
-          <button (click)="select('five')" class="btn btn-outline-success text-left btn-block">
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="row">
+          <div class="col-3">
+            <div class="pl-2 pt-2">
+              <app-of-pictures ofp="3"></app-of-pictures>
+            </div>
+          </div>
+          <div class="col-9">
             <div class="row">
               <div class="col">
-                OF 5
-              </div>
-              <div class="col text-right">
-                <div *ngIf="button == of5">
-                  <i class="fa fa-check"></i>
+                <div class="p-2">
+                  <b>OF 3</b>
                 </div>
               </div>
             </div>
-          </button>
+            <div class="row">
+              <div class="col">
+                <div class="pr-2 pt-2 pb-2">
+                  Deformation of one endplate with distinct posterior wall involvement
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-3 text-right">
-          <app-of-pictures ofp="5"></app-of-pictures>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="p-2">
+              <button (click)="select('three')" class="btn btn-sm btn-outline-success text-left btn-block">
+                <div class="row">
+                  <div class="col">
+                    OF 3
+                  </div>
+                  <div class="col text-right">
+                    <div *ngIf="button == of3">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="row mt-3">
-        <div class="col-9 text-left">
-          <a [routerLink]="['/two']" class="btn btn-outline-danger btn-block">next</a>
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="row">
+          <div class="col-3">
+            <div class="p-2">
+              <app-of-pictures ofp="4"></app-of-pictures>
+            </div>
+          </div>
+          <div class="col-9 text-left">
+            <div class="row">
+              <div class="col">
+                <div class="p-2">
+                  <b>OF 4</b>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-left">
+                <div class="pr-2">
+                  Deformation of both endplates with / without posterior wall involvement
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="p-2">
+              <button (click)="select('four')" class="btn btn-sm btn-outline-success text-left btn-block">
+                <div class="row">
+                  <div class="col">
+                    OF 4
+                  </div>
+                  <div class="col text-right">
+                    <div *ngIf="button == of4">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="row">
+          <div class="col-3">
+            <div class="p-2">
+              <div class="col-3">
+                <app-of-pictures ofp="5"></app-of-pictures>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <div class="col">
+                <div class="p-2">
+                  <b>OF 5</b>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="pr-2 pb-2 pt-2">
+                    Injuries with posterior tension band failure
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="p-2">
+              <button (click)="select('five')" class="btn btn-sm btn-outline-success text-left btn-block">
+                <div class="row">
+                  <div class="col">
+                    OF 5
+                  </div>
+                  <div class="col text-right">
+                    <div *ngIf="button == of5">
+                      <i class="fa fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <div class="p-2">
+        <a [routerLink]="['/two']" class="btn btn-outline-danger btn-block">next</a>
       </div>
     </div>
   </div>
