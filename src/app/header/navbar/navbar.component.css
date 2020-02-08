@@ -4,9 +4,10 @@
 
 a {
   cursor: pointer;
+  color: #111111;
 }
 
-@media screen and (min-width: 992px) {
+/*@media screen and (min-width: 992px) {*/
   #bottom-nav {
     display: none;
   }
@@ -18,9 +19,9 @@ a {
   #top-nav-desk {
     display: block;
   }
-}
+/*}*/
 
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 992px) {
   #bottom-nav {
     display: block;
     border-top: 1px solid;
@@ -34,4 +35,4 @@ a {
   #top-nav-desk {
     display: none;
   }
-}
+}*/

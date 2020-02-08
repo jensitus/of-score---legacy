@@ -1,8 +1,8 @@
-<nav id="top-nav-desk" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
+<nav id="top-nav-desk" class="navbar fixed-top navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
     <a class="navbar-brand" *ngIf="home">{{title}}</a>
     <a class="navbar-brand" (click)="backLink()" *ngIf="!home"><i class="fa fa-arrow-left"></i> {{title}}</a>
-    <ul class="navbar-nav mr-auto">
+    <ul class="nav justify-content-end">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -13,7 +13,7 @@
   </div>
 </nav>
 
-<nav id="top-nav-mobile" class="navbar navbar-expand-lg navbar-light bg-{{bg}}">
+<nav id="top-nav-mobile" class="navbar fixed-top navbar-expand-lg navbar-light bg-{{bg}}">
   <div class="container">
     <a class="navbar-brand" *ngIf="home">{{title}}</a>
     <a class="navbar-brand" (click)="backLink()" *ngIf="!home"><i class="fa fa-arrow-left"></i> {{title}}</a>
