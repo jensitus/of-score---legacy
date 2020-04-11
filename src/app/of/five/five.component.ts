@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {OfScore} from '../of-score.enum';
 
 @Component({
@@ -11,27 +11,39 @@ export class FiveComponent implements OnInit {
   title = 'neurology';
   bg = 'warning';
 
-  button: boolean;
+  button: string;
   neurology: string;
 
-  constructor() { }
+  yes = 'yes';
+  no = 'no';
+
+  constructor() {
+  }
 
   ngOnInit() {
     if (localStorage.getItem(OfScore.FIVE) === '2') {
-      this.button = true;
+      this.button = this.yes;
     } else {
-      this.button = false;
+      this.button = this.no;
     }
   }
 
-  select() {
-    this.button = !this.button;
-    if (this.button) {
-      this.neurology = '2';
-    } else {
-      this.neurology = '0';
+  select(button) {
+    switch (button) {
+      case 'yes': {
+        this.button = this.yes;
+        this.neurology = '2';
+        localStorage.setItem(OfScore.FIVE, this.neurology);
+        break;
+      }
+      case 'no': {
+        this.button = this.no;
+        this.neurology = '0';
+        localStorage.setItem(OfScore.FIVE, this.neurology);
+        break;
+      }
     }
-    localStorage.setItem(OfScore.FIVE, this.neurology);
+
   }
 
 }

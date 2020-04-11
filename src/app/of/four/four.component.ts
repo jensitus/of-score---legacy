@@ -11,8 +11,8 @@ export class FourComponent implements OnInit {
   title: string;
   bg: string;
 
-  vasMoreThanFour = '1';
-  vasLessThanFour = '-1';
+  vasMoreThanFive = '1';
+  vasLessThanFive = '-1';
   button: string;
 
   constructor() { }
@@ -26,13 +26,13 @@ export class FourComponent implements OnInit {
   select(button) {
     switch (button) {
       case 'more': {
-        this.button = this.vasMoreThanFour;
-        localStorage.setItem(OfScore.FOUR, this.vasMoreThanFour);
+        this.button = this.vasMoreThanFive;
+        localStorage.setItem(OfScore.FOUR, this.vasMoreThanFive);
         break;
       }
       case 'less': {
-        this.button = this.vasLessThanFour;
-        localStorage.setItem(OfScore.FOUR, this.vasLessThanFour);
+        this.button = this.vasLessThanFive;
+        localStorage.setItem(OfScore.FOUR, this.vasLessThanFive);
         break;
       }
     }

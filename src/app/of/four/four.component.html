@@ -7,10 +7,10 @@
         <button (click)="select('more')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS &ge; 4
+              VAS &ge; 5
             </div>
             <div class="col">
-              <div *ngIf="button == vasMoreThanFour" class="text-right">
+              <div *ngIf="button == vasMoreThanFive" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
@@ -21,10 +21,10 @@
         <button (click)="select('less')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS &lt; 4
+              VAS &lt; 5
             </div>
             <div class="col">
-              <div *ngIf="button == vasLessThanFour" class="text-right">
+              <div *ngIf="button == vasLessThanFive" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>

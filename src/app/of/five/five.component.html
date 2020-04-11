@@ -4,13 +4,27 @@
   <div class="row">
     <div class="col-md-4">
       <div class="card border-0 mt-3">
-        <button (click)="select()" class="btn btn-outline-dark text-left">
+        <button (click)="select('yes')" class="btn btn-outline-dark text-left">
           <div class="row">
             <div class="col">
-              Neurology
+              Yes
             </div>
             <div class="col">
-              <div *ngIf="button" class="text-right">
+              <div *ngIf="button == 'yes'" class="text-right">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('no')" class="btn btn-outline-dark text-left">
+          <div class="row">
+            <div class="col">
+              No
+            </div>
+            <div class="col">
+              <div *ngIf="button == 'no'" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
