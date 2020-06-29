@@ -1,13 +1,18 @@
 <app-navbar [title]="title" [bg]="bg" [home]="home"></app-navbar>
 <div class="container">
-  <div class="row">
-    <div class="col home-class mt-5">
+  <div class="row home-class">
+    <div class="col mt-5">
       <h4>
         Welcome to the OF Score
       </h4>
       <div class="mt-5">
         <a [routerLink]="['/one']" class="btn btn-outline-danger">go</a>
       </div>
+    </div>
+    <div class="col mt-5">
+      <p>
+        <img src="../../../assets/pictures/of_trans.png" />
+      </p>
     </div>
   </div>
 </div>

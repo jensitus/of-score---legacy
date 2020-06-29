@@ -2,6 +2,10 @@
   margin-top: 100px;
 }
 
+.of-logo {
+  height: 40px;
+}
+
 a {
   cursor: pointer;
   color: #111111;
