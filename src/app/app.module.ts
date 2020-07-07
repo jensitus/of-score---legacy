@@ -17,6 +17,8 @@ import {RouterModule} from '@angular/router';
 import {SevenComponent} from './of/seven/seven.component';
 import { LegalComponent } from './legal/legal.component';
 import { OfPicturesComponent } from './of/of-pictures/of-pictures.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { OfPicturesComponent } from './of/of-pictures/of-pictures.component';
     BrowserModule,
     NgbModule,
     RoutingModule,
-    RouterModule
+    RouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
