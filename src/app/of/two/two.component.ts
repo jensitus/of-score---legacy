@@ -12,15 +12,18 @@ export class TwoComponent implements OnInit {
 
   title = 'bone density';
   bg = 'secondary';
-  button: boolean;
+  // button: boolean;
   tScore: string;
+  isEnabled: boolean;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.isEnabled = false;
     if (localStorage.getItem(this.T_SCORE) != null) {
       this.tScore = localStorage.getItem((this.T_SCORE));
+      this.isEnabled = true;
     }
   }
 
@@ -32,6 +35,7 @@ export class TwoComponent implements OnInit {
     } else if (this.tScore === 'unknown') {
       localStorage.setItem(OfScore.TWO, '0');
     }
+    this.isEnabled = true;
   }
 
 }
