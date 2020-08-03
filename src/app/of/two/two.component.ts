@@ -8,6 +8,8 @@ import {OfScore} from '../of-score.enum';
 })
 export class TwoComponent implements OnInit {
 
+  T_SCORE = 'tScore';
+
   title = 'bone density';
   bg = 'secondary';
   button: boolean;
@@ -17,24 +19,19 @@ export class TwoComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem(OfScore.TWO) == null) {
-      this.tScore = '0';
-      localStorage.setItem(OfScore.TWO, this.tScore);
-    } else if (localStorage.getItem(OfScore.TWO) === '1') {
-      this.button = true;
-    } else {
-      this.button = false;
+    if (localStorage.getItem(this.T_SCORE) != null) {
+      this.tScore = localStorage.getItem((this.T_SCORE));
     }
   }
 
-  select() {
-    this.button = !this.button;
-    if (this.button) {
-      this.tScore = '1';
-    } else {
-      this.tScore = '0';
+  select(tScore) {
+    this.tScore = tScore;
+    localStorage.setItem(this.T_SCORE, this.tScore);
+    if (this.tScore === '1' || this.tScore === '0') {
+      localStorage.setItem(OfScore.TWO, this.tScore);
+    } else if (this.tScore === 'unknown') {
+      localStorage.setItem(OfScore.TWO, '0');
     }
-    localStorage.setItem(OfScore.TWO, this.tScore);
   }
 
 }
