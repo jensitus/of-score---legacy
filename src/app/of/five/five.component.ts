@@ -23,35 +23,27 @@ export class FiveComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isEnabled = false;
-    if (localStorage.getItem('neurology') === this.yes) {
-      this.button = this.yes;
+    this.neurology = localStorage.getItem('neurology');
+    if (this.neurology != null) {
       this.isEnabled = true;
-    } else if (localStorage.getItem('neurology') === this.no) {
-      this.button = this.no;
-      this.isEnabled = true;
-    } else if (localStorage.getItem('neurology') === this.unknown) {
-      this.button = this.unknown;
-      this.isEnabled = true;
+    } else {
+      this.isEnabled = false;
     }
   }
 
   select(button) {
     switch (button) {
       case 'yes': {
-        this.button = this.yes;
         this.neurology = this.yes;
         localStorage.setItem(OfScore.FIVE, '2');
         break;
       }
       case 'no': {
-        this.button = this.no;
         this.neurology = this.no;
         localStorage.setItem(OfScore.FIVE, '0');
         break;
       }
       case 'unknown': {
-        this.button = this.unknown;
         this.neurology = this.unknown;
         localStorage.setItem(OfScore.FIVE, '0');
       }
