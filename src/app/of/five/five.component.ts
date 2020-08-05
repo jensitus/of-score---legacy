@@ -16,15 +16,23 @@ export class FiveComponent implements OnInit {
 
   yes = 'yes';
   no = 'no';
+  unknown = 'unknown';
+  isEnabled: boolean;
 
   constructor() {
   }
 
   ngOnInit() {
-    if (localStorage.getItem(OfScore.FIVE) === '2') {
+    this.isEnabled = false;
+    if (localStorage.getItem('neurology') === this.yes) {
       this.button = this.yes;
-    } else {
+      this.isEnabled = true;
+    } else if (localStorage.getItem('neurology') === this.no) {
       this.button = this.no;
+      this.isEnabled = true;
+    } else if (localStorage.getItem('neurology') === this.unknown) {
+      this.button = this.unknown;
+      this.isEnabled = true;
     }
   }
 
@@ -32,18 +40,24 @@ export class FiveComponent implements OnInit {
     switch (button) {
       case 'yes': {
         this.button = this.yes;
-        this.neurology = '2';
-        localStorage.setItem(OfScore.FIVE, this.neurology);
+        this.neurology = this.yes;
+        localStorage.setItem(OfScore.FIVE, '2');
         break;
       }
       case 'no': {
         this.button = this.no;
-        this.neurology = '0';
-        localStorage.setItem(OfScore.FIVE, this.neurology);
+        this.neurology = this.no;
+        localStorage.setItem(OfScore.FIVE, '0');
         break;
       }
+      case 'unknown': {
+        this.button = this.unknown;
+        this.neurology = this.unknown;
+        localStorage.setItem(OfScore.FIVE, '0');
+      }
     }
-
+    this.isEnabled = true;
+    localStorage.setItem('neurology', this.neurology);
   }
 
 }
