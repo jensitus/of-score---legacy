@@ -13,29 +13,41 @@ export class FourComponent implements OnInit {
 
   vasMoreThanFive = '1';
   vasLessThanFive = '-1';
+  unknown = 'unknown';
   button: string;
+  isEnabled: boolean;
+  vas: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.isEnabled = false;
     this.title = 'Pain';
     this.bg = 'warning';
-    this.button = localStorage.getItem(OfScore.FOUR);
+    this.vas = localStorage.getItem('vas');
+    if (this.vas != null) {
+      this.isEnabled = true;
+    }
   }
 
-  select(button) {
-    switch (button) {
+  select(vas) {
+    this.vas = vas;
+    switch (vas) {
       case 'more': {
-        this.button = this.vasMoreThanFive;
-        localStorage.setItem(OfScore.FOUR, this.vasMoreThanFive);
+        localStorage.setItem(OfScore.FOUR, '1');
         break;
       }
       case 'less': {
-        this.button = this.vasLessThanFive;
-        localStorage.setItem(OfScore.FOUR, this.vasLessThanFive);
+        localStorage.setItem(OfScore.FOUR, '0');
+        break;
+      }
+      case 'unknown': {
+        localStorage.setItem(OfScore.FOUR, '0');
         break;
       }
     }
+    localStorage.setItem('vas', this.vas);
+    this.isEnabled = true;
   }
 
 }
