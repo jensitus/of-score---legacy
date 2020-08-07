@@ -10,7 +10,7 @@
               Yes
             </div>
             <div class="col">
-              <div *ngIf="button == '-1'" class="text-right">
+              <div *ngIf="mobilization == 'yes'" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
@@ -24,14 +24,28 @@
               No
             </div>
             <div class="col">
-              <div *ngIf="button == '1'" class="text-right">
+              <div *ngIf="mobilization == 'no'" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
           </div>
         </button>
       </div>
-      <div class="mt-3">
+      <div class="card border-0 mt-3">
+        <button (click)="select('unknown')" class="btn btn-outline-success text-left">
+          <div class="row">
+            <div class="col">
+              Unknown
+            </div>
+            <div class="col">
+              <div *ngIf="mobilization == 'unknown'" class="text-right">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3" *ngIf="isEnabled">
         <a [routerLink]="['/seven']" class="btn btn-outline-dark" [innerHTML]="next"></a>
       </div>
     </div>

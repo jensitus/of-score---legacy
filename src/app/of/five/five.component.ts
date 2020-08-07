@@ -16,34 +16,40 @@ export class FiveComponent implements OnInit {
 
   yes = 'yes';
   no = 'no';
+  unknown = 'unknown';
+  isEnabled: boolean;
 
   constructor() {
   }
 
   ngOnInit() {
-    if (localStorage.getItem(OfScore.FIVE) === '2') {
-      this.button = this.yes;
+    this.neurology = localStorage.getItem('neurology');
+    if (this.neurology != null) {
+      this.isEnabled = true;
     } else {
-      this.button = this.no;
+      this.isEnabled = false;
     }
   }
 
   select(button) {
     switch (button) {
       case 'yes': {
-        this.button = this.yes;
-        this.neurology = '2';
-        localStorage.setItem(OfScore.FIVE, this.neurology);
+        this.neurology = this.yes;
+        localStorage.setItem(OfScore.FIVE, '2');
         break;
       }
       case 'no': {
-        this.button = this.no;
-        this.neurology = '0';
-        localStorage.setItem(OfScore.FIVE, this.neurology);
+        this.neurology = this.no;
+        localStorage.setItem(OfScore.FIVE, '0');
         break;
       }
+      case 'unknown': {
+        this.neurology = this.unknown;
+        localStorage.setItem(OfScore.FIVE, '0');
+      }
     }
-
+    this.isEnabled = true;
+    localStorage.setItem('neurology', this.neurology);
   }
 
 }

@@ -4,20 +4,48 @@
   <div class="row">
     <div class="col-md-4">
       <div class="card border-0 mt-3">
-        <button (click)="select()" class="btn btn-outline-secondary text-left">
-          <div class="row">
+        <button (click)="select('1')" class="btn btn-outline-secondary text-left">
+          <div class="row">'
             <div class="col">
               T-Score < -3
             </div>
             <div class="col text-right">
-              <div *ngIf="button">
+              <div *ngIf="tScore == '1'">
                 <i class="fa fa-check"></i>
               </div>
             </div>
           </div>
         </button>
       </div>
-      <div class="mt-3">
+      <div class="card border-0 mt-3">
+        <button (click)="select('0')" class="btn btn-outline-secondary text-left">
+          <div class="row">
+            <div class="col">
+              T-Score > -3
+            </div>
+            <div class="col text-right">
+              <div *ngIf="tScore == '0'">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card border-0 mt-3">
+        <button (click)="select('unknown')" class="btn btn-outline-secondary text-left">
+          <div class="row">
+            <div class="col">
+              Unknown
+            </div>
+            <div class="col text-right">
+              <div *ngIf="tScore == 'unknown'">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3" *ngIf="isEnabled">
         <a [routerLink]="['/three']" class="btn btn-outline-info">next</a>
       </div>
     </div>

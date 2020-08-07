@@ -1,13 +1,13 @@
 <app-navbar [title]="title" [bg]="bg"></app-navbar>
 <div class="container">
-  <h4 class="mt-5">Dynamic</h4>
+  <h4 class="mt-5">Progression of deformity</h4>
   <div class="row">
     <div class="col-md-4">
       <div class="card border-0 mt-3">
         <button (click)="select('yes')" class="btn btn-outline-dark text-left">
           <div class="row">
             <div class="col">
-              Yes
+              Progression
             </div>
             <div class="col">
               <div *ngIf="button == 'yes'" class="text-right">
@@ -21,7 +21,7 @@
         <button (click)="select('no')" class="btn btn-outline-dark text-left">
           <div class="row">
             <div class="col">
-              No
+              No progression
             </div>
             <div class="col">
               <div *ngIf="button == 'no'" class="text-right">
@@ -31,7 +31,21 @@
           </div>
         </button>
       </div>
-      <div class="mt-3">
+      <div class="card border-0 mt-3">
+        <button (click)="select('unknown')" class="btn btn-outline-dark text-left">
+          <div class="row">
+            <div class="col">
+              Unknown
+            </div>
+            <div class="col">
+              <div *ngIf="button == 'unknown'" class="text-right">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3" *ngIf="isEnabled">
         <a [routerLink]="['/four']" class="btn btn-outline-primary">next</a>
       </div>
     </div>

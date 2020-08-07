@@ -8,35 +8,45 @@ import {OfScore} from '../of-score.enum';
 })
 export class SixComponent implements OnInit {
 
-  title = 'Mobilization';
+  title = 'Possibility of mobilization';
   bg = 'primary';
 
   yes = '-1';
   no = '1';
-  button: string;
-
+  mobilization: string;
+  isEnabled: boolean;
   next: string;
+  unknown = 'unknown';
 
   constructor() { }
 
   ngOnInit() {
-    this.button = localStorage.getItem(OfScore.SIX);
+    this.isEnabled = false;
+    this.mobilization = localStorage.getItem('mobilization');
     this.next = 'next';
+    if (this.mobilization != null) {
+      this.isEnabled = true;
+    }
   }
 
-  select(button) {
-    switch (button) {
+  select(mobilization) {
+    this.mobilization = mobilization;
+    switch (mobilization) {
       case 'yes': {
-        this.button = this.yes;
-        localStorage.setItem(OfScore.SIX, this.yes);
+        localStorage.setItem(OfScore.SIX, '1');
         break;
       }
       case 'no': {
-        this.button = this.no;
-        localStorage.setItem(OfScore.SIX, this.no);
+        localStorage.setItem(OfScore.SIX, '0');
+        break;
+      }
+      case 'unknown': {
+        localStorage.setItem(OfScore.SIX, '0');
         break;
       }
     }
+    localStorage.setItem('mobilization', this.mobilization);
+    this.isEnabled = true;
   }
 
 }

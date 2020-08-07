@@ -7,10 +7,10 @@
         <button (click)="select('more')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS &ge; 5
+              VAS &ge; 4
             </div>
             <div class="col">
-              <div *ngIf="button == vasMoreThanFive" class="text-right">
+              <div *ngIf="vas == 'more'" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
@@ -21,17 +21,31 @@
         <button (click)="select('less')" class="btn btn-outline-danger text-left">
           <div class="row">
             <div class="col">
-              VAS &lt; 5
+              VAS &lt; 4
             </div>
             <div class="col">
-              <div *ngIf="button == vasLessThanFive" class="text-right">
+              <div *ngIf="vas == 'less'" class="text-right">
                 <i class="fa fa-check"></i>
               </div>
             </div>
           </div>
         </button>
       </div>
-      <div class="mt-3">
+      <div class="card border-0 mt-3">
+        <button (click)="select('unknown')" class="btn btn-outline-danger text-left">
+          <div class="row">
+            <div class="col">
+              Unknown
+            </div>
+            <div class="col">
+              <div *ngIf="vas == 'unknown'" class="text-right">
+                <i class="fa fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="mt-3" *ngIf="isEnabled">
         <a [routerLink]="['/five']" class="btn btn-outline-success">next</a>
       </div>
     </div>
