@@ -32,32 +32,26 @@ export class SevenComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isEnabled = false;
     if (localStorage.getItem(this.UNKNOWN) === 'true') {
       this.unknown = true;
-      this.isEnabled = true;
     }
     if (localStorage.getItem(this.ASA) === 'true') {
       this.asa = true;
-      this.isEnabled = true;
     }
     if (localStorage.getItem(this.DEMENTIA) === 'true') {
       this.dementia = true;
-      this.isEnabled = true;
     }
     if (localStorage.getItem(this.BMI) === 'true') {
       this.bmi = true;
-      this.isEnabled = true;
     }
     if (localStorage.getItem(this.DEPENDENT) === 'true') {
       this.dependent = true;
-      this.isEnabled = true;
     }
     if (localStorage.getItem(this.ANTICOAGULATION) === 'true') {
       this.anticoagulation = true;
-      this.isEnabled = true;
     }
     this.next = 'result';
+    this.getIsEnabled();
   }
 
   select(button) {
@@ -137,7 +131,7 @@ export class SevenComponent implements OnInit {
         break;
       }
     }
-    this.isEnabled = true;
+    this.getIsEnabled();
     this.sevenResult();
   }
 
@@ -162,6 +156,21 @@ export class SevenComponent implements OnInit {
       result = -2;
     }
     localStorage.setItem(OfScore.SEVEN, result.toString());
+  }
+
+  private getIsEnabled() {
+    if (
+      this.asa === true
+      || this.dementia === true
+      || this.bmi === true
+      || this.dependent === true
+      || this.anticoagulation === true
+      || this.unknown === true
+    ) {
+      this.isEnabled = true;
+    } else {
+      this.isEnabled = false;
+    }
   }
 
 }
