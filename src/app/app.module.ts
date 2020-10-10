@@ -19,6 +19,7 @@ import { LegalComponent } from './legal/legal.component';
 import { OfPicturesComponent } from './of/of-pictures/of-pictures.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FurtherComponent } from './further/further.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { environment } from '../environments/environment';
     ResultComponent,
     SevenComponent,
     LegalComponent,
-    OfPicturesComponent
+    OfPicturesComponent,
+    FurtherComponent
   ],
   imports: [
     BrowserModule,
