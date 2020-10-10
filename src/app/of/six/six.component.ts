@@ -11,12 +11,12 @@ export class SixComponent implements OnInit {
   title = 'Possibility of mobilization';
   bg = 'primary';
 
-  yes = '-1';
-  no = '1';
+  yes = '1';
+  no = '-1';
   mobilization: string;
   isEnabled: boolean;
   next: string;
-  unknown = 'unknown';
+  unknown = '0';
 
   constructor() { }
 
@@ -33,15 +33,15 @@ export class SixComponent implements OnInit {
     this.mobilization = mobilization;
     switch (mobilization) {
       case 'yes': {
-        localStorage.setItem(OfScore.SIX, '1');
+        localStorage.setItem(OfScore.SIX, this.yes);
         break;
       }
       case 'no': {
-        localStorage.setItem(OfScore.SIX, '0');
+        localStorage.setItem(OfScore.SIX, this.no);
         break;
       }
       case 'unknown': {
-        localStorage.setItem(OfScore.SIX, '0');
+        localStorage.setItem(OfScore.SIX, this.unknown);
         break;
       }
     }
