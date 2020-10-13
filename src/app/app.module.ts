@@ -20,6 +20,7 @@ import { OfPicturesComponent } from './of/of-pictures/of-pictures.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FurtherComponent } from './further/further.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FurtherComponent } from './further/further.component';
     SevenComponent,
     LegalComponent,
     OfPicturesComponent,
-    FurtherComponent
+    FurtherComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
