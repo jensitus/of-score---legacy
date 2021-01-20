@@ -11,8 +11,8 @@ export class SixComponent implements OnInit {
   title = 'Possibility of mobilization';
   bg = 'primary';
 
-  yes = '1';
-  no = '-1';
+  yes = '-1';
+  no = '1';
   mobilization: string;
   isEnabled: boolean;
   next: string;
